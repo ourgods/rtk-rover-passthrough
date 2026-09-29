@@ -1,0 +1,101 @@
+# Ignore everything by default. This repo should track only source and
+# project files needed to build/debug the base-station firmware.
+*
+
+# Keep directory traversal available for whitelisted trees.
+!*/
+
+# Repo metadata.
+!.gitignore
+
+# CubeMX / project metadata.
+!.mxproject
+!Base_station_V10.ioc
+
+# Application source.
+!Core/
+!Core/**
+
+# IAR project files and linker/startup inputs only.
+!EWARM/
+!EWARM/Project.eww
+!EWARM/Base_station_V10.ewd
+!EWARM/Base_station_V10.ewp
+!EWARM/Base_station_V10.ewt
+!EWARM/startup_stm32f103xe.s
+!EWARM/stm32f103xe_flash.icf
+!EWARM/stm32f103xe_sram.icf
+
+# Minimal STM32/CMSIS driver source required by the project.
+!Drivers/
+!Drivers/CMSIS/
+!Drivers/CMSIS/Core/
+!Drivers/CMSIS/Core/Include/
+!Drivers/CMSIS/Core/Include/**
+!Drivers/CMSIS/Device/
+!Drivers/CMSIS/Device/ST/
+!Drivers/CMSIS/Device/ST/STM32F1xx/
+!Drivers/CMSIS/Device/ST/STM32F1xx/Include/
+!Drivers/CMSIS/Device/ST/STM32F1xx/Include/**
+!Drivers/STM32F1xx_HAL_Driver/
+!Drivers/STM32F1xx_HAL_Driver/Inc/
+!Drivers/STM32F1xx_HAL_Driver/Inc/**
+!Drivers/STM32F1xx_HAL_Driver/Src/
+!Drivers/STM32F1xx_HAL_Driver/Src/**
+
+# FreeRTOS source used by the firmware.
+!Middlewares/
+!Middlewares/Third_Party/
+!Middlewares/Third_Party/FreeRTOS/
+!Middlewares/Third_Party/FreeRTOS/Source/
+!Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/
+!Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/**
+!Middlewares/Third_Party/FreeRTOS/Source/include/
+!Middlewares/Third_Party/FreeRTOS/Source/include/**
+!Middlewares/Third_Party/FreeRTOS/Source/portable/
+!Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/
+!Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3/
+!Middlewares/Third_Party/FreeRTOS/Source/portable/IAR/ARM_CM3/**
+!Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/
+!Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/**
+!Middlewares/Third_Party/FreeRTOS/Source/*.c
+
+# Build outputs, generated files, local docs, manuals, vendor tools.
+EWARM/**/BrowseInfo/
+EWARM/**/Obj/
+EWARM/**/Exe/
+EWARM/**/List/
+EWARM/**/settings/
+EWARM/**/.ninja_deps
+EWARM/**/.ninja_log
+EWARM/**/.Base_station_V10_build_cache
+BASE_Station1_*.md
+模块说明书/
+LICENSE
+LICENSE.txt
+*.o
+*.hex
+*.out
+*.sim
+*.map
+*.pbi
+*.pbd
+*.pbw
+*.xcl
+*.dep
+*.dbgdt
+*.dnx
+*.wsdt
+*.crun
+*.cspy.bat
+*.cspy.ps1
+*.driver.xcl
+*.general.xcl
+*.pdf
+*.doc
+*.docx
+*.exe
+*.zip
+*.7z
+*.rar
+Thumbs.db
